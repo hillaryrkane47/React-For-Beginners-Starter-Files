@@ -7,11 +7,11 @@ import App from './components/App';
 import StorePicker from './components/StorePicker';
 import NotFound from './components/NotFound';
 
-const repo = `/${window.location.pathname.split('/')[1]}`;
-
+// const repo = `/${window.location.pathname.split('/')[1]}`;
+// add this to <BrowswerRouter basename={repo}>
 const Root = () => {
   return (
-    <BrowserRouter basename={repo}>
+    <BrowserRouter>
       <div>
         <Match exactly pattern="/" component={StorePicker} />
         <Match exactly pattern="/store/:storeId" component={App} />
